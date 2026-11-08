@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anime-Sama</title>
+  <style>
+    @font-face {
+      font-family: Outfit;
+      font-style: normal;
+      font-weight: 600;
+      src: url("./assets/outfit-latin-600.woff2") format("woff2");
+      font-display: swap;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      align-items: center;
+      background: #101014;
+      color: #fff;
+      display: flex;
+      font-family: Outfit, "Segoe UI", sans-serif;
+      height: 100vh;
+      justify-content: center;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    main {
+      align-items: center;
+      animation: appear 500ms ease-out both;
+      display: flex;
+      flex-direction: column;
+    }
+
+    img {
+      animation: float 1.8s ease-in-out infinite;
+      height: 112px;
+      object-fit: contain;
+      width: 112px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      margin: 18px 0 0;
+      text-transform: uppercase;
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+      margin-top: 22px;
+    }
+
+    .dots span {
+      animation: pulse 900ms ease-in-out infinite alternate;
+      background: #fff;
+      border-radius: 50%;
+      height: 5px;
+      opacity: 0.45;
+      width: 5px;
+    }
+
+    .dots span:nth-child(2) {
+      animation-delay: 150ms;
+    }
+
+    .dots span:nth-child(3) {
+      animation-delay: 300ms;
+    }
+
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      50% { transform: translateY(-5px); }
+    }
+
+    @keyframes pulse {
+      to { opacity: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="./app-icon.png" alt="">
+    <h1>Anime Sama</h1>
+    <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+  </main>
+</body>
+</html>

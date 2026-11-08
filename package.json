@@ -1,0 +1,44 @@
+{
+  "name": "saam-web",
+  "version": "1.0.0",
+  "private": true,
+  "productName": "Anime-Sama Desktop",
+  "description": "Application de bureau Electron.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win portable --x64"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.18.0"
+  },
+  "allowScripts": {
+    "electron@38.8.6": true
+  },
+  "dependencies": {
+    "@ghostery/adblocker-electron": "^2.20.3"
+  },
+  "build": {
+    "appId": "com.saam.animedesktop",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "app.ico"
+    },
+    "portable": {
+      "artifactName": "anime-sama desktop.${ext}",
+      "requestExecutionLevel": "user"
+    },
+    "files": [
+      "main.js",
+      "startup-screen.html",
+      "app-icon.png",
+      "assets/**/*",
+      "package.json"
+    ],
+    "compression": "maximum"
+  }
+}
