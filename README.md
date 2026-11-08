@@ -29,14 +29,3 @@ npm run build:win
 ```
 
 Le fichier généré se trouve dans le dossier `dist`.
-
-## Fonctionnement
-
-L'application utilise Electron et charge le site `https://anime-sama.to/` dans une fenêtre dédiée. Elle ne contient pas les vidéos : leur accès et leur disponibilité dépendent du site.
-
-Les principales parties du projet :
-
-- `main.js` : crée la fenêtre et configure le chargement du site, le bloqueur et les raccourcis.
-- `startup-screen.html` et `assets/` : écran d'accueil, police Outfit du site et sa licence (`assets/OFL.txt`).
-- `package.json` : liste les dépendances et les commandes de démarrage et de compilation.
-- `app-icon.png` et `app.ico` : icônes de l'application.
