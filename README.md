@@ -1,21 +1,22 @@
 # Anime-Sama Desktop
 
-Interface Electron qui affiche le site anime sama depuis une application.
+Anime-Sama Desktop ouvre Anime-Sama dans une fenêtre dédiée sous Windows. Le projet est indépendant et n'est pas affilié à l'équipe d'Anime-Sama.
 
-Anime-Sama Desktop est une application non officiel et je ne suis pas allier avec l'equipe d'anime-sama pour realiser ce projet.
+## Fonctionnalités
+
+- Présence Discord pour les épisodes, les films et les scans.
+- Réglages accessibles depuis le menu de l'icône dans la zone de notification : Discord Rich Presence, lancement avec Windows, AD Block, plein écran et minimisation dans la zone de notification à la fermeture.
+- Une nouvelle ouverture de l'application ramène à la fenêtre déjà lancée.
+- Écran de démarrage et raccourci `F11` pour le plein écran.
+
 
 ## Utilisation
 
-Téléchargez et lancez `Anime-Sama Desktop-1.0.0-portable.exe`.
-
-## Feature
-- `F11` : activer ou quitter le plein écran.
-- Un anti pop up est inclu dans l'application.
-- Un bloqueur de publicités et de traqueurs est activé au démarrage. Quelques éléments publicitaires de la page sont également masqués.
+Téléchargez `anime-sama desktop.exe` depuis les releases GitHub, puis lancez-le.
 
 ## Lancer depuis les sources
 
-Il faut avoir [Node.js](https://nodejs.org/) et npm installés.
+Installez [Node.js](https://nodejs.org/), puis exécutez :
 
 ```bash
 npm install
@@ -28,4 +29,4 @@ Pour créer la version portable Windows 64 bits :
 npm run build:win
 ```
 
-Le fichier généré se trouve dans le dossier `dist`.
+Le fichier est généré dans `dist`.
