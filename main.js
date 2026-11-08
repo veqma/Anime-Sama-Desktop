@@ -88,7 +88,10 @@ function createWindow() {
       console.error('Impossible de masquer les éléments publicitaires.', error);
     });
   });
-  contents.on('page-title-updated', (event) => event.preventDefault());
+  contents.on('page-title-updated', (event) => {
+    event.preventDefault();
+    window.setTitle(appName);
+  });
   contents.on('will-navigate', (event, address) => {
     try {
       parseWebUrl(address);
@@ -134,7 +137,9 @@ function createWindow() {
 app.whenReady().then(() => {
   app.setName(appName);
   if (process.platform === 'win32') app.setAppUserModelId('com.saam.animedesktop');
-  session.defaultSession.setPermissionRequestHandler((_contents, _permission, callback) => callback(false));
+  session.defaultSession.setPermissionRequestHandler((_contents, permission, callback) => {
+    callback(permission === 'fullscreen');
+  });
   createWindow();
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
