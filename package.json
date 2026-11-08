@@ -1,9 +1,9 @@
 {
-  "name": "saam-web",
+  "name": "anime-sama-desktop",
   "version": "1.0.0",
   "private": true,
   "productName": "Anime-Sama Desktop",
-  "description": "Application de bureau Electron.",
+  "description": "Application de bureau non officielle pour Anime-Sama.",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -17,7 +17,8 @@
     "electron@38.8.6": true
   },
   "dependencies": {
-    "@ghostery/adblocker-electron": "^2.20.3"
+    "@ghostery/adblocker-electron": "^2.20.3",
+    "discord-rpc": "^4.0.1"
   },
   "build": {
     "appId": "com.saam.animedesktop",
